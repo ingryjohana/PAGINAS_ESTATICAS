@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Static</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <!--link para poder visualizar bootstrap-->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+  </head>
+
+  <body>
+ 
+  <nav class="navbar navbar-inverse ">
+    <%= link_to "Bienvenida", pagina_estatica_bienvenida_url %>
+    <%= link_to "Otro", pagina_estatica_otro_url %>
+    <%= link_to "Ayuda", pagina_estatica_ayuda_url %>  
+  </nav>
+
+  <p>esta es la pagina de <%= yield(:p)%></p>
+    <%= yield %>
+  </body>
+</html>
